@@ -16,6 +16,6 @@ chicago.csv
 new-york-city.csv
 
 ### Credits
-https://www.freecodecamp.org/news/the-git-push-command-explained/
-https://www.jquery-az.com/git-push-command/
-https://docs.github.com/en
+1)https://www.freecodecamp.org/news/the-git-push-command-explained/
+2)https://www.jquery-az.com/git-push-command/
+3)https://docs.github.com/en
