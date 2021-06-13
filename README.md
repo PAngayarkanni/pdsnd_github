@@ -7,7 +7,7 @@
 PDSND Project
 
 ### Description
-Cool Project explaining how to do version control
+Cool Project explaining how to do version control. This project helps to understand how to connect local repo with the remote repo.
 
 ### Files used
 bikeshare.py
