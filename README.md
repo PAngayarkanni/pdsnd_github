@@ -1,21 +1,25 @@
 >**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+# Project for Udacity's Nanodegree program : Programming for Data Science 
+# Submitted by Angayarkanni Palaniappan 
 
-### Date created
-6/13/2021 - Sunday
+### Project created on
+6/13/2021 
 
 ### Project Title
-Programming for Data Science Nanodegree - Udacity Project submitted by Angayarkanni Palaniappan
+Programming for Data Science Nanodegree - Udacity Project 
 
 ### Description
-Cool Project explaining how to do version control. This project helps to understand how to connect local repo with the remote repo.
+Cool Project explaining how to do version control. This project helped me to understand Version control better using Git and GitHub. Local repo was programmed using GitBash
 
 ### Files used
-bikeshare.py
-washington.csv
-chicago.csv
-new-york-city.csv
+**bikeshare.py
+*washington.csv
+*chicago.csv
+*new-york-city.csv
 
 ### Credits
-1)https://www.freecodecamp.org/news/the-git-push-command-explained/
-2)https://www.jquery-az.com/git-push-command/
-3)https://docs.github.com/en
+**https://www.freecodecamp.org/news/the-git-push-command-explained/
+**https://www.jquery-az.com/git-push-command/
+**https://docs.github.com/en
+
+Mentor: Richard Kalehoff and ShmelN helped me to a greater extent in understanding the concepts better
