@@ -66,6 +66,7 @@ def load_data(city, month, day):
     df['hour'] = df['Start Time'].dt.hour
 
     # filter by month if applicable
+    
     if month != 'all':
         month =  MONTHS.index(month) + 1
         df = df[ df['month'] == month ]
@@ -147,7 +148,7 @@ def trip_duration_stats(df):
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
-
+    # The following program code will produce results along with the time format displayed properly
     #Uses sum method to calculate the total trip duration
     total_duration = df['Trip Duration'].sum()
     #Finds out the duration in minutes and seconds format
@@ -177,7 +178,7 @@ def user_stats(df):
     start_time = time.time()
 
     # TO DO: Display counts of user types
-    
+    #User count statistics displayed using the following logic
     user_counts = df['User Type'].value_counts()
     print("Counts of user types:\n", user_counts)
     
