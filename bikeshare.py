@@ -220,10 +220,10 @@ def get_user_input(comment, user_list):
 
 def display_raw_data(df):
     """Displays raw bikeshare data."""
-    length_of_rows = df.shape[0]
+    row_length = df.shape[0]
 
     # iterate from 0 to the number of rows in steps of 5
-    for i in range(0, length_of_rows, 5):
+    for i in range(0, row_length, 10):
         
         a = input("\nWould you like to examine the particular user trip data?However, it will all be displayed as Unnamed as there is no name given in the csv, Type \'yes\' or \'no\'\n")
         if a.lower() != 'yes':
@@ -231,7 +231,7 @@ def display_raw_data(df):
         
         # retrieve and convert data to json format
         # split each json row data 
-        row_values = df.iloc[i: i + 5].to_json(orient='records', lines=True).split('\n')
+        row_values = df.iloc[i: i + 10].to_json(orient='records', lines=True).split('\n')
         for row in row_values:
             # pretty print each user data
             parsed_row_values = json.loads(row)
