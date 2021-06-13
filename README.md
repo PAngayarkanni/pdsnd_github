@@ -4,7 +4,7 @@
 6/13/2021 - Sunday
 
 ### Project Title
-PDSND Project
+Programming in Data Science Nanodegree - Udacity Project submitted by Angayarkanni Palaniappan
 
 ### Description
 Cool Project explaining how to do version control. This project helps to understand how to connect local repo with the remote repo.
