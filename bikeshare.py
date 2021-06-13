@@ -116,14 +116,14 @@ def station_stats(df):
     # TO DO: display most commonly used start station
     #DISPLAYING MOST COMMONLY USED START STATION
     #Using df. idxmax() to find the index of the max value of a Pandas DataFrame column
-    most_common_used_start_station = df['Start Station'].mode()[0]
+    most_common_start_station = df['Start Station'].value_counts().idxmax()
     print("Most used start: ", most_common_used_start_station)
     
 
     # TO DO: display most commonly used end station
     #DISPLAYING MOST COMMONLY USED END STATION
     #Using df. idxmax() to find the index of the max value of a Pandas DataFrame column
-    most_common_used_end_station = df['End Station'].mode()[0]
+    most_common_end_station = df['End Station'].value_counts().idxmax()
     print("Most used end: ", most_common_used_end_station)
     
     
@@ -169,7 +169,7 @@ def trip_duration_stats(df):
         print(f"\nThe average trip duration is {mins} minutes and {sec} seconds.")
 
     print(f"\nThis took {(time.time() - start_time)} seconds.")
-    print('-'*40)
+    print('-'*80)
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
@@ -201,7 +201,7 @@ def user_stats(df):
     print("\nThis took %s seconds." %(time.time() - start_time))
     print('-'*40)
     
-def get_user_input(comment, user_list):
+def get_user_input(message, user_input_options):
     """
     An utility function to obtain user specific input value
     Args:
@@ -211,8 +211,8 @@ def get_user_input(comment, user_list):
     """
 
     while True:
-        user_data = input(comment).lower()
-        if user_data in user_list:
+        user_data = input(message).lower()
+        if user_data in user_input_options:
             break
         if user_data == 'all':
             break
@@ -221,10 +221,10 @@ def get_user_input(comment, user_list):
 
 def display_raw_data(df):
     """Displays raw bikeshare data."""
-    length_of_rows = df.shape[0]
+    row_length = df.shape[0]
 
     # iterate from 0 to the number of rows in steps of 5
-    for i in range(0, length_of_rows, 5):
+    for i in range(0, row_length, 10):
         
         a = input("\nWould you like to examine the particular user trip data?However, it will all be displayed as Unnamed as there is no name given in the csv, Type \'yes\' or \'no\'\n")
         if a.lower() != 'yes':
@@ -232,7 +232,7 @@ def display_raw_data(df):
         
         # retrieve and convert data to json format
         # split each json row data 
-        row_values = df.iloc[i: i + 5].to_json(orient='records', lines=True).split('\n')
+        row_values = df.iloc[i: i + 10].to_json(orient='records', lines=True).split('\n')
         for row in row_values:
             # pretty print each user data
             parsed_row_values = json.loads(row)
@@ -248,8 +248,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        raw_data = input('\nWould you like to see the raw data?Enter yes or no.\n')
-        display_raw_data(df)
+       
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':  
            break
