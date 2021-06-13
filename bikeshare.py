@@ -115,14 +115,14 @@ def station_stats(df):
     # TO DO: display most commonly used start station
     #DISPLAYING MOST COMMONLY USED START STATION
     #Using df. idxmax() to find the index of the max value of a Pandas DataFrame column
-    most_common_used_start_station = df['Start Station'].mode()[0]
+    most_common_start_station = df['Start Station'].value_counts().idxmax()
     print("Most used start: ", most_common_used_start_station)
     
 
     # TO DO: display most commonly used end station
     #DISPLAYING MOST COMMONLY USED END STATION
     #Using df. idxmax() to find the index of the max value of a Pandas DataFrame column
-    most_common_used_end_station = df['End Station'].mode()[0]
+    most_common_end_station = df['End Station'].value_counts().idxmax()
     print("Most used end: ", most_common_used_end_station)
     
     
