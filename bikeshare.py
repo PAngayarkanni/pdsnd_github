@@ -31,10 +31,12 @@ def get_filters():
            break
 
     # TO DO: get user input for month (all, january, february, ... , june)
+    #Get user input for their choice of month of the year
     month = get_user_input("Please type a month of your choice from january to june for analysis"\
                     "or type in \'all\' to apply no month filter. \n(e.g. all, january, february, march, april, may, june) \n> ", MONTHS)
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    #Get the input from the user for their choice of the day of week
     day = get_user_input("Please type one of the week day for analysis or type in \'all\' to apply no day filter. \n(e.g. all, sunday, monday, tuesday, wednesday, thursday, friday, saturday) \n> ", DAYS)
 
     print('-'*40)
