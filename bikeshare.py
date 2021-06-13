@@ -168,7 +168,7 @@ def trip_duration_stats(df):
         print(f"\nThe average trip duration is {mins} minutes and {sec} seconds.")
 
     print(f"\nThis took {(time.time() - start_time)} seconds.")
-    print('-'*40)
+    print('-'*80)
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
@@ -200,7 +200,7 @@ def user_stats(df):
     print("\nThis took %s seconds." %(time.time() - start_time))
     print('-'*40)
     
-def get_user_input(comment, user_list):
+def get_user_input(message, user_input_options):
     """
     An utility function to obtain user specific input value
     Args:
@@ -210,8 +210,8 @@ def get_user_input(comment, user_list):
     """
 
     while True:
-        user_data = input(comment).lower()
-        if user_data in user_list:
+        user_data = input(message).lower()
+        if user_data in user_input_options:
             break
         if user_data == 'all':
             break
@@ -247,8 +247,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        raw_data = input('\nWould you like to see the raw data?Enter yes or no.\n')
-        display_raw_data(df)
+       
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':  
            break
